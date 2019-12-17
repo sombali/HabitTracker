@@ -1,0 +1,7 @@
+platform :ios, '13.2'
+use_frameworks!
+
+target 'HabitTracker' do
+  pod 'SwiftMessages'
+end
+
