@@ -19,6 +19,8 @@
 		727D65A1239E9DC4005354D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727D659F239E9DC4005354D8 /* LaunchScreen.storyboard */; };
 		727D65B4239EB117005354D8 /* Habit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D65B2239EB117005354D8 /* Habit+CoreDataClass.swift */; };
 		727D65B7239EF666005354D8 /* HabitDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727D65B6239EF666005354D8 /* HabitDetailTableViewController.swift */; };
+		728865BE23A969AA00A6FD44 /* LocationNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728865BD23A969AA00A6FD44 /* LocationNotificationViewController.swift */; };
+		728865C023A99F2E00A6FD44 /* CenteredSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728865BF23A99F2E00A6FD44 /* CenteredSegue.swift */; };
 		72CD0CFE239F0FA300BC7A2A /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD0CFD239F0FA300BC7A2A /* Period.swift */; };
 		72CD0D00239F145900BC7A2A /* TimeOfDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD0CFF239F145900BC7A2A /* TimeOfDay.swift */; };
 		72CD0D02239F262B00BC7A2A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CD0D01239F262B00BC7A2A /* DateExtension.swift */; };
@@ -44,6 +46,8 @@
 		727D65A2239E9DC4005354D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		727D65B2239EB117005354D8 /* Habit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Habit+CoreDataClass.swift"; path = "../../Habit+CoreDataClass.swift"; sourceTree = "<group>"; };
 		727D65B6239EF666005354D8 /* HabitDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailTableViewController.swift; sourceTree = "<group>"; };
+		728865BD23A969AA00A6FD44 /* LocationNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationNotificationViewController.swift; sourceTree = "<group>"; };
+		728865BF23A99F2E00A6FD44 /* CenteredSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenteredSegue.swift; sourceTree = "<group>"; };
 		72CD0CFD239F0FA300BC7A2A /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
 		72CD0CFF239F145900BC7A2A /* TimeOfDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeOfDay.swift; sourceTree = "<group>"; };
 		72CD0D01239F262B00BC7A2A /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 				72D3F22B23A57A1100B60143 /* AllHabitTableViewController.swift */,
 				7239FC4E23B80689001B303A /* CreateHabitTableViewController.swift */,
 				72E512AE23A7CF8900CBB870 /* DateNotificationViewController.swift */,
+				728865BD23A969AA00A6FD44 /* LocationNotificationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				72E512AC23A7CDCA00CBB870 /* BottomCardSegue.swift */,
+				728865BF23A99F2E00A6FD44 /* CenteredSegue.swift */,
 			);
 			path = Segues;
 			sourceTree = "<group>";
@@ -284,11 +290,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				727D6596239E9DC0005354D8 /* HabitTableViewController.swift in Sources */,
+				728865C023A99F2E00A6FD44 /* CenteredSegue.swift in Sources */,
 				727D65B7239EF666005354D8 /* HabitDetailTableViewController.swift in Sources */,
 				72CD0D00239F145900BC7A2A /* TimeOfDay.swift in Sources */,
 				72E512AD23A7CDCA00CBB870 /* BottomCardSegue.swift in Sources */,
 				727D65B4239EB117005354D8 /* Habit+CoreDataClass.swift in Sources */,
 				72D3F22C23A57A1100B60143 /* AllHabitTableViewController.swift in Sources */,
+				728865BE23A969AA00A6FD44 /* LocationNotificationViewController.swift in Sources */,
 				72CD0CFE239F0FA300BC7A2A /* Period.swift in Sources */,
 				7239FC4F23B80689001B303A /* CreateHabitTableViewController.swift in Sources */,
 				72CD0D02239F262B00BC7A2A /* DateExtension.swift in Sources */,

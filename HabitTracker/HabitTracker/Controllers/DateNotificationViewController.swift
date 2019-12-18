@@ -25,6 +25,14 @@ class DateNotificationViewController: UIViewController {
         datePicker.setValue(UIColor(red:0.92, green:0.92, blue:0.92, alpha:1.0), forKeyPath: "textColor")
         
         requestNotificationAuthorization()
+        
+        userNotificationCenter.getNotificationSettings() { settings in
+            guard settings.authorizationStatus == .authorized else {
+                self.doneButton.isEnabled = false
+                return
+            }
+            self.doneButton.isEnabled = true
+        }
     }
     
     func requestNotificationAuthorization() {

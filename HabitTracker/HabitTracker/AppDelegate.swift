@@ -17,16 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     fileprivate func checkLastLaunchToResetHabitStatus() {
-        let actualCalendar = Calendar.current
         let defaults = UserDefaults.standard
         
         let lastLaunch = defaults.object(forKey: "LastLaunch") as? Date ?? Date()
-        let lastLaunchDay = actualCalendar.component(.day, from: lastLaunch)
-        
         let actualDate = Date()
-        let day = actualCalendar.component(.day, from: actualDate)
 
-        if lastLaunchDay < day {
+        if lastLaunch < actualDate {
             let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Habit")
             do {
                 let habits = try persistentContainer.viewContext.fetch(fetchRequest)
@@ -42,8 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        checkLastLaunchToResetHabitStatus()
         
+        checkLastLaunchToResetHabitStatus()
         return true
     }
 

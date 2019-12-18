@@ -68,7 +68,13 @@ class HabitTableViewController: UITableViewController {
         let weeklyPredicate = NSPredicate(format: "period == \(WEEKLYPERIODCODE)")
         let currentDayPredicate = NSPredicate(format: "dayOfWeek ==  \(currentWeekDay)")
         let weekPredicate = NSCompoundPredicate(type: .and, subpredicates: [weeklyPredicate, currentDayPredicate])
-        let monthlyPredicate = NSPredicate(format: "dayOfMonth = \(todayDayDate)")
+        
+        let monthlyDayOfMonthPredicate = NSPredicate(format: "dayOfMonth = \(todayDayDate)")
+        let monthlyCodePredicate = NSPredicate(format: "period == \(MONTHLYPERIODCODE)")
+        let monthlyPredicate = NSCompoundPredicate(type: .and, subpredicates: [monthlyDayOfMonthPredicate, monthlyCodePredicate])
+        
+        print(currentWeekDay)
+        print(todayDayDate)
         
         return NSCompoundPredicate(type: NSCompoundPredicate.LogicalType.or, subpredicates: [dailyPredicate, weekPredicate, monthlyPredicate])
     }

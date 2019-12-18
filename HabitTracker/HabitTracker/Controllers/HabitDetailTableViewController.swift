@@ -58,6 +58,7 @@ class HabitDetailTableViewController: UITableViewController {
         periodType = .daily
         periodSegmentedControl.selectedSegmentIndex = 0
         timeOfDaySegmentedControl.selectedSegmentIndex = 0
+        streakLabel.text = "0"
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {
@@ -173,14 +174,20 @@ class HabitDetailTableViewController: UITableViewController {
     }
     
     // MARK: Navigation
-    @IBAction func newRemainderTimeCellTapped(_ sender: Any) {
+    @IBAction func newReminderTimeCellTapped(_ sender: Any) {
         performSegue(withIdentifier: "DatePickerSegue", sender: self)
+    }
+    @IBAction func newReminderLocationCellTapped(_ sender: Any) {
+        performSegue(withIdentifier: "LocationSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "DatePickerSegue" {
             let dateNotificationVC = segue.destination as! DateNotificationViewController
             dateNotificationVC.text = habitNameTextField.text
+        } else if segue.identifier == "LocationSegue" {
+            let locationNotificationVC = segue.destination as! LocationNotificationViewController
+            locationNotificationVC.text = habitNameTextField.text
         }
     }
     
